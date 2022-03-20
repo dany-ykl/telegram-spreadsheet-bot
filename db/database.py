@@ -8,7 +8,7 @@ class DB:
 
 
     def __init__(self):
-        self.engine = create_engine('sqlite:///db/data.db', echo=True)
+        self.engine = create_engine('sqlite:///db/data.db')
         self.Session = sessionmaker(bind=self.engine)
         self.session = self.Session()
 
